@@ -1,0 +1,58 @@
+<html>
+<head>
+<title>light up</title>
+<style>
+
+body{
+    background-color: black;
+}
+
+#bulbon{
+    display: none;
+}
+
+#zombie{
+    visibility: hidden;
+}
+
+</style>
+</head>
+<body>
+    <div id="bulb">
+   <img src="https://image.freepik.com/free-photo/light-bulb-black_172429-647.jpg" style="width: 550px;" id="bulboff">
+   <img src="https://previews.123rf.com/images/murika/murika1511/murika151100069/48123160-bright-glowing-incandescent-light-bulb-on-a-white-background.jpg" style="width: 500px;" id="bulbon">
+    </div>
+    <marquee behavior="" direction="right" >
+   <img src="https://i.gifer.com/3MfN.gif" style="width: 350px;" id="zombie"> 
+</marquee>
+
+<script>
+ const bulb=document.getElementById("bulb");
+const bulbon=document.getElementById("bulbon");
+const bulboff=document.getElementById("bulboff");
+const zombie=document.getElementById("zombie");
+const body=document.querySelector("body");
+var status="bulboff";  
+
+  bulb.onclick=()=>{
+  if(status==="bulboff"){
+    body.style.backgroundColor="white";
+  bulbon.style.display="block";
+  bulboff.style.display="none";
+  zombie.style.visibility="visible";
+  status="bulbon";
+  }else{
+    body.style.backgroundColor="black";
+  bulbon.style.display="none";
+  bulboff.style.display="block";
+  zombie.style.visibility="hidden";
+  status="bulboff";
+    
+  }
+  
+}
+
+</script>
+
+</body>
+</html>
